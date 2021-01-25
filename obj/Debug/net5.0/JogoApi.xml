@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JogoApi</name>
+    </assembly>
+    <members>
+        <member name="T:JogoApi.Controllers.AdminController">
+            <summary>
+            Only admin has access
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.AdminController.GetAll">
+             <summary>
+            List of all admin 
+             </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.AdminController.GetByUsername(System.Int32)">
+             <summary>
+             Get information of a player
+             </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.AdminController.UpdateRole(System.Int32,JogoApi.Model.Users.UpdateModel)">
+            <summary>
+            Change the role of the admin to a simple player
+             </summary>
+            <param name="id"></param>
+            <param name="updateModel"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.AdminController.Update(System.Int32,JogoApi.Model.Users.UpdateModel)">
+            <summary>
+            Edit admin
+            </summary>
+            <param name="id"></param>
+            <param name="updateModel"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.AdminController.Create(JogoApi.Model.Users.RegisterModel)">
+            <summary>
+            Admin registration
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.AdminController.Authenticate(JogoApi.Model.Users.AuthenticateModel)">
+            <summary>
+            Admin login
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.FriendsController.GetAll">
+            <summary>
+            List of all friends of current user
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.FriendsController.GetUserFriends(System.String)">
+            <summary>
+            Only dmin can see the list of some user friends
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.FriendsController.CreateInvite(JogoApi.Models.SetFriendship)">
+            <summary>
+             Send friendship invite to another player
+             </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.FriendsController.DeleteFriends(System.String)">
+            <summary>
+            Delete friendship
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.InvitesController.GetAll">
+            <summary>
+             List of all users invites
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.InvitesController.GetInviteTo(System.String)">
+            <summary>
+            List of invites sent to user
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.InvitesController.GetInviteFrom">
+            <summary>
+            List of invites sent from user
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.InvitesController.Update(JogoApi.Models.SetFriendship)">
+            <summary>
+             Accept invite
+            </summary>
+            <param name="setFriendship"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.LeaguesController.GetLeagues">
+             <summary>
+            List of all leagues data 
+             </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.LeaguesController.GetLeagues(System.Int32)">
+             <summary>
+            List of data from one user data 
+             </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.LeaguesController.PutLeagues(System.Int32,JogoApi.Model.Game.Leagues)">
+             <summary>
+            Update data from user league
+             </summary>
+            <param name="id"></param>
+            <param name="leagues"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.LeaguesController.PostLeagues(JogoApi.Model.Game.Leagues)">
+             <summary>
+            Poat data from user league
+             </summary>
+            <param name="leagues"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.LeaguesController.DeleteLeagues(System.Int32)">
+             <summary>
+            Delete data from user league
+             </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.MatchController.GetMatchHistory">
+            <summary>
+            Get all data
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.MatchController.GetMatchHistory(System.String)">
+            <summary>
+            Get user matches data
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.MatchController.PostMatchHistory(JogoApi.Model.Game.Results)">
+            <summary>
+             Insert match results
+             </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.MatchController.DeleteMatchHistory(System.Int32)">
+            <summary>
+            Delete match data
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.MatchController.GetUserHistory(System.String)">
+            <summary>
+             List of user matches statistics
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.MatchController.GetUser10MatchesHistory(System.String)">
+            <summary>
+            Get last 10 matches statistics of user
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="T:JogoApi.Controllers.UsersController">
+            User and admin has access
+        </member>
+        <member name="M:JogoApi.Controllers.UsersController.GetAll">
+            <summary>
+            List of all players
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.UsersController.GetByUsername(System.String)">
+            <summary>
+            Get user information
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.UsersController.Update(System.Int32,JogoApi.Model.Users.UpdateModel)">
+            <summary>
+            Edit user 
+            </summary>
+            <param name="id"></param>
+            <param name="updateModel"></param>
+        </member>
+        <member name="M:JogoApi.Controllers.UsersController.Create(JogoApi.Model.Users.RegisterModel)">
+            <summary>
+            User sign in
+            </summary>
+        </member>
+        <member name="M:JogoApi.Controllers.UsersController.Authenticate(JogoApi.Model.Users.AuthenticateModel)">
+            <summary>
+            User login
+            </summary>
+        </member>
+    </members>
+</doc>
